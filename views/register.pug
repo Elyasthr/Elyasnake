@@ -1,0 +1,19 @@
+doctype html
+head
+  title Register
+body
+    form(action='/register-verif' method='post')
+        div
+            label(for='pseudo') pseudo
+            input(type='text' name='pseudo' required='')
+        div
+            label(for='email') email
+            input(type='email' name='email' required='')
+        div
+            label(for='password') password
+            input(type='password' name='password' required='')
+        div
+            button(type='submit') Register
+        div
+            a(href="/login") Login
+            a(href="/") Acceuil

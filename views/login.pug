@@ -1,0 +1,16 @@
+doctype html
+head
+  title Login
+body
+    form(action='/login-verif' method='post')
+        div
+            label(for='pseudo') pseudo:
+            input(type='text' name='pseudo' required='')
+        div
+            label(for='password') password
+            input(type='password' name='password' required='')
+        div
+            button(type='submit') Login
+    div
+        a(href='/register') Register
+        a(href='/') Acceuil

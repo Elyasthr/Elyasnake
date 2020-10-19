@@ -1,0 +1,19 @@
+doctype html
+head
+    title Game
+    script(type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js')
+    script(src='/socket.io/socket.io.js')
+    script(src='/js/client.js')
+style.
+  * { margin: 0; padding: 0; }
+  body { font: 24px Helvetica, Arial; }
+  #scores { float: right; padding-top: 16px; padding-right: 16px; }
+  #classement { float: right; padding-top: 200px; padding-right: 16px; }
+body
+  #scores Scores:
+    #monJoueur
+    #autreJoueurs
+  #classement Classement General:
+
+    p#pseudo(style='display: none') #{pseudo}
+    p#id(style='display: none') #{id}
