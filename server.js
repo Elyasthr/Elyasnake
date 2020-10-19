@@ -104,7 +104,7 @@ app.post("/register-verif",(req,res)=>{
                         console.log("L'utilisateur a été creer correctement");
                         req.session._id = result.ops[0]._id;
                         req.session.pseudo = result.ops[0].pseudo;
-                        res.render('game');
+                        res.render('login');
                     });
                 }
                 else{
