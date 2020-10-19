@@ -185,7 +185,7 @@ io.on('connection',(socket)=>{
 
     socket.on('mort',(joueur)=>{
         _.remove(joueurs,joueur);
-        var destination = 'http://localhost:3030/perdu';
+        var destination = 'https://elyasnake.herokuapp.com/perdu';
         socket.emit('redirect', destination);
 
     })
