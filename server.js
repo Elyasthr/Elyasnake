@@ -12,7 +12,6 @@ const session = require('express-session');
 const MongoClient = require('mongodb').MongoClient;
 const urlDB = 'mongodb+srv://elyasmugi:Elnvmdp2020m@cluster0.94rus.mongodb.net/test;'
 const nameDB = 'game';
-const MongoStore = require('connect-mongo')(session);
 
 //middleware
 app.set('view engine', 'pug');
@@ -24,9 +23,6 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
     secret: 's3cur3',
-    store: new MongoStore({
-        url: 'mongodb://localhost:27017'
-    })
 }));
 
 //routes
