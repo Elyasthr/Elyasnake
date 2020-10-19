@@ -68,7 +68,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     })();
 
     //lien socket avec le server
-    const socket = io('http://localhost:3030');
+    const socket = io('https://elyasnake.herokuapp.com/');
 
     socket.on('connect',()=>{
         console.log('connexion client etablie');

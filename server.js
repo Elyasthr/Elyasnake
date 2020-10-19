@@ -3,14 +3,14 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const port = 3030;
+const PORT = process.env.PORT || 3030;
 
 //Requis pour les session utilisateur
 const session = require('express-session');
 
 //Requis pour ce connecter à la base de donnée Mongo
 const MongoClient = require('mongodb').MongoClient;
-const urlDB = 'mongodb://localhost:27017';
+const urlDB = 'mongodb+srv://elyasmugi:Elnvmdp2020m@cluster0.94rus.mongodb.net/test;'
 const nameDB = 'game';
 const MongoStore = require('connect-mongo')(session);
 
@@ -136,7 +136,7 @@ app.get('/logout', (req, res) => {
 });
 
 //Ecoute du port
-const server = app.listen(port,()=>{
+const server = app.listen(PORT,()=>{
      console.log('le server est lancé');
  })
 
